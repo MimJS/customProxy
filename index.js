@@ -23,9 +23,9 @@ https
 app.post("/proxy", async (req, res) => {
   const { url } = req.body;
 
-  const res = await fetch(url).then((r) => r.json());
+  const response = await fetch(url).then((r) => r.json());
 
   return res.send({
-    response: res,
+    response: response,
   });
 });
